@@ -1,0 +1,55 @@
+@use '../abstracts/' as *;
+
+.main {
+    max-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: $verylight-gb;
+    background-image: url('../../images/bg-top.svg');
+    background-repeat: no-repeat;
+    background-position: 1075% -3%;
+    background-size: 95%;
+    text-align: center;
+
+    @include dt {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-image:
+            url('../../images/bg-top.svg'),
+            url('../../images/bg-bottom.svg');
+        background-repeat: no-repeat;
+        background-position: 104% top, -5% bottom;
+        background-size: 25%, 25%;
+    }
+
+    &__heading {
+        font-size: 2rem;
+        letter-spacing: .05rem;
+        color: $dark-gb;
+        margin-top: 5rem;
+    }
+
+    &__toggle {
+        margin-top: 2.5rem;
+        margin-bottom: 4rem;
+
+        @include dt {
+            margin-bottom: 0;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 4rem;
+
+        @include dt {
+            flex-direction: row;
+            margin-bottom: 2.75rem;
+        }
+    }
+}

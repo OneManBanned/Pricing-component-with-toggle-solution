@@ -1,0 +1,141 @@
+@use '../abstracts/' as *;
+
+.price {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+
+    &__dollar {
+        font-size: 2.6rem;
+        align-self: center;
+        padding-right: .25rem;
+    }
+
+    &__monthly,
+    &__annually {
+        font-size: 4.5rem;
+        color: $dark-gb;
+    }
+}
+
+.card {
+    margin: 5% 5%;
+    background-color: white;
+    border-radius: .5rem;
+    padding: 0 2rem;
+
+    @include dt {
+        width: 23.5rem;
+        margin: 6.25% 0;
+        height: fit-content;
+    }
+
+    &__heading {
+        color: $grayish-b;
+        font-size: 1.25rem;
+        margin-top: 2.25rem;
+    }
+
+    &__list {
+        color: $grayish-b;
+        border-top: 2px solid $verylight-gb;
+        border-bottom: 2px solid $verylight-gb;
+        margin-top: 1.5rem;
+    }
+
+    &__listItem {
+        border-bottom: 2px solid $verylight-gb;
+        padding: 1rem;
+    }
+
+    &__listItem:last-of-type {
+        border: none;
+    }
+
+    &__link {
+        background-image: $gradient;
+        padding: .9rem 5.74rem;
+        border-radius: .4rem;
+        text-decoration: none;
+        display: block;
+        margin: 2rem 0;
+        color: white;
+        text-transform: uppercase;
+        font-size: .85rem;
+        letter-spacing: .1rem;
+
+
+        @include dt {
+            margin-bottom: 2.25rem;
+            letter-spacing: .1rem;
+        }
+    }
+
+    &__link:hover {
+        background: transparent;
+        border: 1px solid hsl(237, 63%, 64%);
+        color: hsl(237, 63%, 64%);
+    }
+
+    &__purple {
+        background-image: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+        &-heading {
+            color: white;
+            margin-top: 2.25rem;
+
+            @include dt {
+                margin-top: 4rem;
+            }
+        }
+
+        &-price {
+            color: white;
+        }
+
+        &-monthly {
+            color: white;
+        }
+
+        &-annually {
+            color: white;
+        }
+
+        &-list {
+            border-bottom: 1px solid $verylight-gb;
+            border-top: 1px solid $verylight-gb;
+        }
+
+        &-listItem {
+            color: white;
+            border-bottom: 1px solid $verylight-gb;
+        }
+
+        &-link {
+            background-color: white;
+            background-image: none;
+            color: hsl(237, 63%, 64%);
+            margin-bottom: 2rem;
+
+            @include dt {
+                margin-bottom: 4rem;
+            }
+        }
+
+        &-link:hover {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+    }
+}
+
+
+
+.monthlyHidden {
+    display: none;
+}
+
+.yearlyHidden {
+    display: none;
+}

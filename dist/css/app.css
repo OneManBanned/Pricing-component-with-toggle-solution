@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+li,
+ul {
+  list-style: none;
+}
+
+.toggle {
+  color: hsl(234deg, 14%, 74%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.toggle__input {
+  display: none;
+}
+.toggle__custom {
+  position: relative;
+  width: 55px;
+  height: 32.5px;
+  border-radius: 2rem;
+  background-color: hsl(237deg, 63%, 64%);
+  margin: 0 1rem;
+  transition: background 0.2s;
+}
+.toggle__custom:hover {
+  background-color: hsl(236deg, 72%, 79%);
+}
+.toggle__input:checked ~ .toggle__custom {
+  background-color: hsl(237deg, 63%, 64%);
+}
+.toggle__input:checked ~ .toggle__custom:hover {
+  background-color: hsl(236deg, 72%, 79%);
+}
+.toggle__custom::after {
+  content: "";
+  position: absolute;
+  top: 16%;
+  left: 8%;
+  height: 22.5px;
+  width: 22.5px;
+  background: white;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+.toggle__input:checked ~ .toggle__custom::after {
+  transform: translateX(22px);
+}
+
+.main {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(240deg, 78%, 98%);
+  background-image: url("../../images/bg-top.svg");
+  background-repeat: no-repeat;
+  background-position: 1075% -3%;
+  background-size: 95%;
+  text-align: center;
+}
+@media (min-width: 376px) {
+  .main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url("../../images/bg-top.svg"), url("../../images/bg-bottom.svg");
+    background-repeat: no-repeat;
+    background-position: 104% top, -5% bottom;
+    background-size: 25%, 25%;
+  }
+}
+.main__heading {
+  font-size: 2rem;
+  letter-spacing: 0.05rem;
+  color: hsl(232deg, 13%, 33%);
+  margin-top: 5rem;
+}
+.main__toggle {
+  margin-top: 2.5rem;
+  margin-bottom: 4rem;
+}
+@media (min-width: 376px) {
+  .main__toggle {
+    margin-bottom: 0;
+  }
+}
+.main__cards {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+@media (min-width: 376px) {
+  .main__cards {
+    flex-direction: row;
+    margin-bottom: 2.75rem;
+  }
+}
+
+.price {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+.price__dollar {
+  font-size: 2.6rem;
+  align-self: center;
+  padding-right: 0.25rem;
+}
+.price__monthly, .price__annually {
+  font-size: 4.5rem;
+  color: hsl(232deg, 13%, 33%);
+}
+
+.card {
+  margin: 5% 5%;
+  background-color: white;
+  border-radius: 0.5rem;
+  padding: 0 2rem;
+}
+@media (min-width: 376px) {
+  .card {
+    width: 23.5rem;
+    margin: 6.25% 0;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+.card__heading {
+  color: hsl(233deg, 13%, 49%);
+  font-size: 1.25rem;
+  margin-top: 2.25rem;
+}
+.card__list {
+  color: hsl(233deg, 13%, 49%);
+  border-top: 2px solid hsl(240deg, 78%, 98%);
+  border-bottom: 2px solid hsl(240deg, 78%, 98%);
+  margin-top: 1.5rem;
+}
+.card__listItem {
+  border-bottom: 2px solid hsl(240deg, 78%, 98%);
+  padding: 1rem;
+}
+.card__listItem:last-of-type {
+  border: none;
+}
+.card__link {
+  background-image: linear-gradient(90deg, hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
+  padding: 0.9rem 5.74rem;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  display: block;
+  margin: 2rem 0;
+  color: white;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.1rem;
+}
+@media (min-width: 376px) {
+  .card__link {
+    margin-bottom: 2.25rem;
+    letter-spacing: 0.1rem;
+  }
+}
+.card__link:hover {
+  background: transparent;
+  border: 1px solid hsl(237deg, 63%, 64%);
+  color: hsl(237deg, 63%, 64%);
+}
+.card__purple {
+  background-image: linear-gradient(hsl(236deg, 72%, 79%), hsl(237deg, 63%, 64%));
+}
+.card__purple-heading {
+  color: white;
+  margin-top: 2.25rem;
+}
+@media (min-width: 376px) {
+  .card__purple-heading {
+    margin-top: 4rem;
+  }
+}
+.card__purple-price {
+  color: white;
+}
+.card__purple-monthly {
+  color: white;
+}
+.card__purple-annually {
+  color: white;
+}
+.card__purple-list {
+  border-bottom: 1px solid hsl(240deg, 78%, 98%);
+  border-top: 1px solid hsl(240deg, 78%, 98%);
+}
+.card__purple-listItem {
+  color: white;
+  border-bottom: 1px solid hsl(240deg, 78%, 98%);
+}
+.card__purple-link {
+  background-color: white;
+  background-image: none;
+  color: hsl(237deg, 63%, 64%);
+  margin-bottom: 2rem;
+}
+@media (min-width: 376px) {
+  .card__purple-link {
+    margin-bottom: 4rem;
+  }
+}
+.card__purple-link:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+}
+
+.monthlyHidden {
+  display: none;
+}
+
+.yearlyHidden {
+  display: none;
+}/*# sourceMappingURL=app.css.map */

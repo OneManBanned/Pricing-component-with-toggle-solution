@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="dist/css/app.css">
+  <title>Frontend Mentor | Pricing component with toggle</title>
+
+</head>
+
+<body>
+  <main class="main">
+
+    <h1 class="main__heading">Our Pricing</h1>
+
+    <div class="main__toggle">
+      <label class="toggle" for="toggle">Annually
+        <input class="toggle__input" type="checkbox" id="toggle">
+        <div class="toggle__custom"></div>
+        Monthly
+      </label>
+    </div>
+
+    <div class="main__cards">
+
+      <div class="card card__white">
+        <h2 class="card__heading">Basic</h2>
+        <div class="card__price price"><span class="price__dollar">&dollar;</span><b class="price__monthly">199.99</b>
+          <b class="price__annually yearlyHidden">19.99</b>
+        </div>
+        <li class="card__list">
+          <ul class="card__listItem">500 GB Storage</ul>
+          <ul class="card__listItem">2 Users Allowed</ul>
+          <ul class="card__listItem">Send up to 3 GB</ul>
+        </li>
+        <a class="card__link" href="#">Learn More</a>
+      </div>
+
+      <div class="card card__purple">
+        <h2 class="card__heading card__purple-heading">Professional</h2>
+        <div class="card__price price card__purple-price"><span class="price__dollar">&dollar;</span><b
+            class="price__monthly card__purple-monthly">249.99</b>
+          <b class="price__annually card__purple-annually yearlyHidden">24.99</b>
+        </div>
+        <li class="card__list card__purple-list">
+          <ul class="card__listItem card__purple-listItem">1 TB Storage</ul>
+          <ul class="card__listItem card__purple-listItem">5 Users Allowed</ul>
+          <ul class="card__listItem card__purple-listItem">Send up to 10 GB</ul>
+        </li>
+        <a class="card__link card__purple-link" href="#">Learn More</a>
+      </div>
+
+      <div class="card card__white">
+        <h2 class="card__heading">Master</h2>
+        <div class="card__price price"><span class="price__dollar">&dollar;</span><b class="price__monthly">399.99</b>
+          <b class="price__annually yearlyHidden">39.99</b>
+        </div>
+        <li class="card__list">
+          <ul class="card__listItem">2 TB Storage</ul>
+          <ul class="card__listItem">10 Users Allowed</ul>
+          <ul class="card__listItem">Send up to 20 GB</ul>
+        </li>
+        <a class="card__link" href="#">Learn More</a>
+      </div>
+
+    </div>
+
+  </main>
+</body>
+<script src="index.js"></script>
+
+</html>
